@@ -1,6 +1,6 @@
 # Lumenaria-Utilities-bot
 ## Cos'è
-Lumenaria Utilities è un bot che aiuta la micronazione [Lumenaria][https://t.me/RepubblicaLumenaria] nella gestione dei cittadini
+Lumenaria Utilities è un bot che aiuta la micronazione [Lumenaria](https://t.me/RepubblicaLumenaria) nella gestione dei cittadini
 ## Le funzionalità
 La versione attualmente più aggiornata (16/02/2021) permette di importare una lista JSON di cittadini già esistente ed aggiungere o eliminare un cittadino dalla lista
 ## I comandi
