@@ -1,28 +1,27 @@
 # Code by FrancescoLFM 2021
 # No licences, free to use this code
-import os
+
 import json
 from time import process_time
-# from pydrive.auth import GoogleAuth
-# from pydrive.drive import GoogleDrive
 import logging
 from telegram import ParseMode
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
+# Logger
+
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 pvt_text="Attenzione! Funziono solo nella piazza di <a href='t.me/RepubblicaLumenaria'>Lumenaria</a>"
-# Google Drive
-# gauth = GoogleAuth()
-# gauth.LocalWebserverAuth()
-# drive = GoogleDrive(gauth)
-# Hosting
-PORT = int(os.environ.get('PORT', 5000))
-# Bot
+
+# Updater settings
+
 TOKEN=""
 updater = Updater(token=TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 c = -466724082
+# This method is for the command /start
+
+
 def start(update, context):
     user = update.message.from_user
     admin = context.bot.get_chat_member(chat_id=c, user_id=user['id'])
@@ -40,6 +39,8 @@ def start(update, context):
         context.bot.send_message(chat_id=update.message.chat.id,
                                     text=pvt_text,
                                     parse_mode=ParseMode.HTML)
+        
+        
 def newlist(update, context):
     t1_start = process_time()
     user = update.message.from_user
@@ -63,6 +64,9 @@ def newlist(update, context):
         context.bot.send_message(chat_id=update.message.chat.id,
                                  text=pvt_text,
                                     parse_mode=ParseMode.HTML)
+# Command /newlist
+
+
 def load(update, context):
         try:
             if update.message.chat.id == c:
@@ -82,6 +86,8 @@ def load(update, context):
         except TypeError:
             context.bot.send_message(chat_id=c,
                                      text="Non inserire numeri nel file!\n(Se vuoi inserirli devi mettere le virgolette)")
+# Command /newcit
+
 
 def add(update, context):
     try:
@@ -103,6 +109,9 @@ def add(update, context):
                                      parse_mode=ParseMode.HTML)
     except IndexError:
         context.bot.send_message(chat_id=c, text="Sintassi erata, inserire parametri dopo /newcit\nEsempio: /newcit Giorgio Stramaroni @GiorgioStramaroni")
+
+# Command delcit
+
 
 def delete(update, context):
     if update.message.chat.id == c:
@@ -137,11 +146,8 @@ load_handler = CommandHandler('cittadini', load)
 add_handler = CommandHandler('newcit', add)
 delete_handler = CommandHandler('delcit', delete)
 handler_array = [start_handler, newlist_handler, load_handler, add_handler, delete_handler]
-#Adding Handlers
+# Adding Handlers
 for i in range(len(handler_array)):
     dispatcher.add_handler(handler_array[i])
-# updater loop
-# updater.start_webhook(listen="0.0.0.0", port=int(PORT), url_path=TOKEN)
-# updater.bot.setWebhook('https://boiling-plains-37671.herokuapp.com/' + TOKEN)
 updater.start_polling()
 updater.idle()
