@@ -24,4 +24,4 @@ Soddisfatto questo requisito, dal prompt dei comandi si esegue 'pip install pyth
 Un'alternativa a pip sarebbe utilizzando git (Assicurarsi di avere git installato):
 1. `git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive`
 2. `cd python-telegram-bot`
-3.`python setup.py install`
+3. `python setup.py install`
