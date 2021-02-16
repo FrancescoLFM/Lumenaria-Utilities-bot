@@ -19,7 +19,7 @@ pvt_text="Attenzione! Funziono solo nella piazza di <a href='t.me/RepubblicaLume
 # Hosting
 PORT = int(os.environ.get('PORT', 5000))
 # Bot
-TOKEN="1535282631:AAFX7bS6oYsCHMAIFs5itBNvyDrDdkQflHU"
+TOKEN=""
 updater = Updater(token=TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 c = -466724082
