@@ -39,7 +39,8 @@ def start(update, context):
         context.bot.send_message(chat_id=update.message.chat.id,
                                     text=pvt_text,
                                     parse_mode=ParseMode.HTML)
-        
+# Command /newlist        
+
         
 def newlist(update, context):
     t1_start = process_time()
@@ -64,7 +65,7 @@ def newlist(update, context):
         context.bot.send_message(chat_id=update.message.chat.id,
                                  text=pvt_text,
                                     parse_mode=ParseMode.HTML)
-# Command /newlist
+# Command /cittadini
 
 
 def load(update, context):
