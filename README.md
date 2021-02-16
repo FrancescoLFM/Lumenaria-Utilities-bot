@@ -19,9 +19,9 @@ Per eseguire il bot l'installazione di tale libreria è necessaria.
 ## Installazione della libreria
 ### Via pip
 Soddisfatto questo requisito, dal prompt dei comandi si esegue 'pip install python-telegram-bot'. In caso non dovesse funzionare, provare
-''python -m pip install python-telegram-bot''
+"python -m pip install python-telegram-bot"
 ### Via git
 Un'alternativa a pip sarebbe utilizzando git (Assicurarsi di avere git installato):
-1. ''git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive''
-2. ''cd python-telegram-bot''
-3. ''python setup.py install''
+1. "git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive"
+2. "cd python-telegram-bot"
+3. ""python setup.py install"
