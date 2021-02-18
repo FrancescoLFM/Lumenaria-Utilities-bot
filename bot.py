@@ -1,8 +1,7 @@
 # Code by FrancescoLFM 2021
 # No licences, free to use this code
-from modules import Add, Del, Newlist, Getlist, Start, Load
-from modules.Variables import TOKEN
-from telegram.ext import Updater
+import commands
+from commands import TOKEN
 from telegram.ext import CommandHandler
 
 while 1:
