@@ -11,6 +11,7 @@ I comandi attualmente presenti sono:
 1. /cittadini - Mostra la lista di cittadini registrata
 1. /newcit <nome> <cognome> <*username> *opzionale - Aggiunge un cittadino alla lista
 1. /delcit <posizione-lista> - Rimuove un cittadino dalla lista
+2. /getlist - Manda la lista importata più recente
 ----
 # Dipendenze
 ----
