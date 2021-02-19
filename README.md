@@ -2,12 +2,12 @@
 ## Cos'è
 Lumenaria Utilities è un bot che aiuta la micronazione [Lumenaria](https://t.me/RepubblicaLumenaria) nella gestione dei cittadini
 ## Le funzionalità
-La versione attualmente più aggiornata (16/02/2021) permette di importare una **lista JSON** di nome `File.json` di cittadini già esistente ed aggiungere o eliminare un cittadino dalla lista.
+La versione attualmente più aggiornata (18/02/2021) permette di importare una **lista JSON** di cittadini già esistente ed aggiungere o eliminare un cittadino dalla lista.
 Esempio di lista:  
 ```
 ["Nome Cognome @Tag", "Nome2 Cognome2 @Tag2"]
 ```
-Per creare una lista vuota creare un file chiamato `File.json` e inserire `[]`.
+Per creare una lista vuota creare un file inserire `[]`.
 
 ## I comandi
 Comandi implementati fino ad ora:
