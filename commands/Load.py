@@ -8,8 +8,8 @@ def load(update, context):
         if update.message.chat.id == c:
             with open("File.json") as file:
                 a = json.load(file)
-            for i in range(1, len(a)+1):
-                a[i-1] = '%s) ' % i + a[i-1]
+            for i in range(0, len(a)):
+                a[i] = '%s) ' % (i + 1) + a[i]
             context.bot.send_message(chat_id=c,
                                      text="<b>Lista degli attuali cittadini</b>:\n"+('\n'.join(a)),
                                      parse_mode=ParseMode.HTML)
