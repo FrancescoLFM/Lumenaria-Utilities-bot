@@ -1,5 +1,5 @@
 import json
-from Variables import c, pvt_text
+from commands.Variables import c, pvt_text
 from telegram import ParseMode
 
 
