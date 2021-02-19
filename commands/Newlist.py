@@ -1,4 +1,4 @@
-from Variables import c, pvt_text
+from commands.Variables import c, pvt_text
 from time import process_time
 from telegram import ParseMode
 
