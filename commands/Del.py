@@ -1,6 +1,6 @@
 import json
 from telegram import ParseMode
-from Variables import c, pvt_text
+from commands.Variables import c, pvt_text
 
 
 def delete(update, context):
