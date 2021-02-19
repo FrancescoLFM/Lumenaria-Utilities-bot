@@ -1,6 +1,7 @@
 from telegram import ParseMode
 import json
 from Variables import c, pvt_text
+import html
 
 
 def add(update, context):
@@ -11,7 +12,7 @@ def add(update, context):
             txt.remove("/newcit")
             with open("File.json", "r+") as file:
                 a = json.load(file)
-                a.append(txt[0])
+                a.append(html.escape(txt[0]))
                 file.close()
             with open("File.json", "w") as file:
                 json.dump(a, file)
