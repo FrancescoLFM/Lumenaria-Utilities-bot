@@ -1,15 +1,19 @@
 # Lumenaria-Utilities-bot
-----
 ## Cos'è
 Lumenaria Utilities è un bot che aiuta la micronazione [Lumenaria](https://t.me/RepubblicaLumenaria) nella gestione dei cittadini
 ## Le funzionalità
-La versione attualmente più aggiornata (16/02/2021) permette di importare una **lista JSON** di cittadini già esistente ed aggiungere o eliminare un cittadino dalla lista
+La versione attualmente più aggiornata (16/02/2021) permette di importare una **lista JSON** di nome `File.json` di cittadini già esistente ed aggiungere o eliminare un cittadino dalla lista.
+Esempio di lista:  
+```
+["Nome Cognome @Tag", "Nome2 Cognome2 @Tag2"]
+```
+Per creare una lista vuota creare un file chiamato `File.json` e inserire `[]`.
 
 ## I comandi
 Comandi implementati fino ad ora:
 ```
 /start                         - Inizializza il bot
-/newlist                       - Aggiungi una lista di cittadini
+/newlist                       - Aggiungi una lista di cittadini taggando il file json
 /cittadini                     - Mostra la lista di cittadini registrata
 /newcit <nome> <cognome> <*username> - Aggiunge un cittadino alla lista
 /delcit <posizione-lista>      - Rimuove un cittadino dalla lista
@@ -17,9 +21,7 @@ Comandi implementati fino ad ora:
 
 *opzionale
 ```  
-----
 # Eseguire il codice
-----
 Per poter eseguire il bot è necessaria la libraria [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)  
 ## Installazione delle dipendenze
 ### Via pip
