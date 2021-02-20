@@ -13,6 +13,7 @@ while 1:
     dispatcher.add_handler(CommandHandler('newcit', Add.add))
     dispatcher.add_handler(CommandHandler('delcit', Del.delete))
     dispatcher.add_handler(CommandHandler('getlista', Getlist.getlist))
+    dispatcher.add_handler(CommandHandler('genlista', Genlist.genlist))
 
 
     updater.start_polling()
