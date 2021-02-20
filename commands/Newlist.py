@@ -2,7 +2,6 @@ from commands.Variables import c, pvt_text
 from time import process_time
 from telegram import ParseMode
 
-
 def newlist(update, context):
     t1_start = process_time()
     user = update.message.from_user
@@ -21,8 +20,10 @@ def newlist(update, context):
             else:
                 context.bot.send_message(chat_id=c, text="Mi dispiace, per eseguire questa azione devi essere admin.")
         except AttributeError:
-            context.bot.send_message(chat_id=c,
-                                     text="Devi rispondere al messaggio del file!")
+            with  file as open("File.json", "w"):
+                file.write("[]")
+             context.bot.send_message(chat_id=c,
+                                      text="Nuova lista vuota generata.")
     else:
         context.bot.send_message(chat_id=update.message.chat.id,
                                  text=pvt_text,
