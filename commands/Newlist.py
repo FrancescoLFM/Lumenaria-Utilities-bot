@@ -3,6 +3,12 @@ from time import process_time
 from telegram import ParseMode
 
 
+def genlist(namefile):
+    with open(namefile, "w") as file:
+        a = []
+        json.dump(a, file)
+
+
 def newlist(update, context):
     t1_start = process_time()
     user = update.message.from_user
