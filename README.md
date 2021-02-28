@@ -38,4 +38,4 @@ Un'alternativa a pip sarebbe utilizzando git (Assicurarsi di avere git installat
 ```
 ## Eseguire il codice
 Per eseguire il codice, sempre da cmd o bash, lanciare il seguente comando:  
-`$ python3 bot.py`
+`$ ./setup.sh TOKEN`
